@@ -18,13 +18,14 @@ app.get('/', (req, res) => {
   })
 })
 
-// get for post
+// get post
 app.get('/post', (req, res) => {
     res.json({
         "posts": posts
     })
   })
 
+// add post
 app.post('/post', (req, res) => {
     console.log(req.body)
     
@@ -47,6 +48,7 @@ app.post('/post', (req, res) => {
     })
 })
 
+// update post
 app.put('/post/:postId', (req, res) => {
     const postId = req.params.postId
     
@@ -77,6 +79,7 @@ app.put('/post/:postId', (req, res) => {
     })
 })
 
+// delete post
 app.delete('/post/:postId', (req, res) => {
     const postId = req.params.postId
     
